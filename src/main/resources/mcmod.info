@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Sigma",
+  "name": "Sigma",
+  "description": "Psi Addon",
+  "version": "${version}",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["viniciuslrangel"],
+  "credits": "Vazkii by Psi",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
