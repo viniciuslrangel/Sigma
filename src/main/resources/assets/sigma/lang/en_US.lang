@@ -1,0 +1,6 @@
+#Datatype
+psi.datatype.Boolean=Boolean
+
+#Pieces
+psi.spellpiece.booleanTrue=True
+psi.spellpiece.booleanTrue.desc=Boolean True
