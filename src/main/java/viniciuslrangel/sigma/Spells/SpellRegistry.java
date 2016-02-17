@@ -13,7 +13,11 @@ import viniciuslrangel.sigma.Sigma;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.Constants.BooleanFalse;
 import viniciuslrangel.sigma.Spells.Boolean.Constants.BooleanTrue;
-import viniciuslrangel.sigma.Spells.Boolean.Operators.*;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanAnd;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanOr;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanTernary;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.Relationals.*;
+import viniciuslrangel.sigma.Spells.Cast.CastToNumber;
 
 import java.lang.instrument.IllegalClassFormatException;
 
@@ -34,6 +38,10 @@ public class SpellRegistry {
         register(BooleanGreaterThanOrEquals.class);
         register(BooleanLessThan.class);
         register(BooleanLessThanOrEquals.class);
+        register(BooleanTernary.class);
+        register(BooleanOr.class);
+        register(BooleanAnd.class);
+        register(CastToNumber.class);
 
     }
 

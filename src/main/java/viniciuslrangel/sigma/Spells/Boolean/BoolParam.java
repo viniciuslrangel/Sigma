@@ -8,6 +8,7 @@ import vazkii.psi.api.spell.SpellContext;
 import vazkii.psi.api.spell.SpellParam;
 import vazkii.psi.api.spell.SpellPiece;
 import vazkii.psi.api.spell.param.ParamSpecific;
+
 import static viniciuslrangel.sigma.Spells.NameList.*;
 
 import java.util.Map;
@@ -28,9 +29,9 @@ public class BoolParam extends ParamSpecific {
 
     public static void addParam(SpellPiece spell, boolean canDisable, boolean constant) {
         Map<String, SpellParam> params = spell.params;
-        if (params.containsKey(GENERIC_NAME_BOOLEAN1))
-            if (params.containsKey(GENERIC_NAME_BOOLEAN2))
-                if (params.containsKey(GENERIC_NAME_BOOLEAN3))
+        if (params.size() > 1)
+            if (params.size() > 2)
+                if (params.size() > 3)
                     throw new IllegalArgumentException(String.format("Already have 3 inputs in spell '%s'", spell.registryKey));
                 else
                     spell.addParam(new BoolParam(GENERIC_NAME_BOOLEAN3, SpellParam.BLUE, canDisable, constant));
@@ -55,7 +56,7 @@ public class BoolParam extends ParamSpecific {
                 param = spell.params.get(GENERIC_NAME_BOOLEAN3);
                 break;
         }
-        if(!spell.paramSides.get(param).isEnabled())
+        if (!spell.paramSides.get(param).isEnabled())
             return null;
         return spell.getParamValue(context, param);
     }

@@ -2,7 +2,7 @@
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
-package viniciuslrangel.sigma.Spells.Boolean.Operators;
+package viniciuslrangel.sigma.Spells.Boolean.Operators.Relationals;
 
 import vazkii.psi.api.spell.Spell;
 import vazkii.psi.api.spell.SpellContext;

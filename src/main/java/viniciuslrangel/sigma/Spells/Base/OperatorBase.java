@@ -25,4 +25,8 @@ public abstract class OperatorBase extends PieceOperator {
 
     @Override
     public abstract Object execute(SpellContext context) throws SpellRuntimeException;
+
+    public boolean isActive(SpellParam param){
+        return paramSides.get(param).isEnabled();
+    }
 }

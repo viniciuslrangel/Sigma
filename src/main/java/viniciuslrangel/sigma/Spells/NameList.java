@@ -14,4 +14,7 @@ public class NameList {
     public static final String GENERIC_NAME_OBJECT2 = "viniciuslrangel.sigma.object2";
     public static final String GENERIC_NAME_OBJECT3 = "viniciuslrangel.sigma.object3";
 
+    //Exceptions
+    public static final String EXCEPTION_NUMBERFORMAT = "viniciuslrangel.sigma.numberformatexception";
+
 }
