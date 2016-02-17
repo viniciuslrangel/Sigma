@@ -6,17 +6,15 @@
  */
 package viniciuslrangel.sigma.Spells.Base;
 
-import vazkii.psi.api.spell.EnumPieceType;
-import vazkii.psi.api.spell.Spell;
-import vazkii.psi.api.spell.SpellContext;
-import vazkii.psi.api.spell.SpellRuntimeException;
+import vazkii.psi.api.spell.*;
 
-public class ConstantBase extends BaseSpell {
+public class ConstantBase extends SpellPiece {
 
     public Object constValue;
 
-    public ConstantBase(Spell spell) {
+    public ConstantBase(Spell spell, Object constValue) {
         super(spell);
+        this.constValue = constValue;
     }
 
     @Override

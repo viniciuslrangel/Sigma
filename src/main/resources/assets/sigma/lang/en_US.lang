@@ -2,5 +2,29 @@
 psi.datatype.Boolean=Boolean
 
 #Pieces
-psi.spellpiece.booleanTrue=True
-psi.spellpiece.booleanTrue.desc=Boolean True
+psi.spellpiece.booleanTrue=Boolean True
+psi.spellpiece.booleanTrue.desc=True constant
+psi.spellpiece.booleanFalse=Boolean False
+psi.spellpiece.booleanFalse.desc=False constant
+psi.spellpiece.booleanOperatorEquals=Boolean Equals
+psi.spellpiece.booleanOperatorEquals.desc=A == B (== C)
+psi.spellpiece.booleanOperatorNotEquals=Boolean Not Equals
+psi.spellpiece.booleanOperatorNotEquals.desc=A != B (or A != C)
+psi.spellpiece.booleanOperatorGreaterThan=Boolean Greater Than
+psi.spellpiece.booleanOperatorGreaterThan.desc=A > B
+psi.spellpiece.booleanOperatorGreaterThanOrEquals=Boolean Greater Than Or Equals
+psi.spellpiece.booleanOperatorGreaterThanOrEquals.desc=A >= B
+psi.spellpiece.booleanOperatorLessThan=Boolean Less Than
+psi.spellpiece.booleanOperatorLessThan.desc=A < B
+psi.spellpiece.booleanOperatorLessThanOrEquals=Boolean Less Than Or Equals
+psi.spellpiece.booleanOperatorLessThanOrEquals.desc=A <= B
+
+
+#ParamName
+viniciuslrangel.sigma.boolean1=Boolean A
+viniciuslrangel.sigma.boolean2=Boolean B
+viniciuslrangel.sigma.boolean3=Boolean C
+
+viniciuslrangel.sigma.object1=Object A
+viniciuslrangel.sigma.object2=Object B
+viniciuslrangel.sigma.object3=Object C

@@ -8,9 +8,14 @@ package viniciuslrangel.sigma.Spells;
 
 import net.minecraft.util.ResourceLocation;
 import vazkii.psi.api.PsiAPI;
+import vazkii.psi.api.spell.SpellPiece;
 import viniciuslrangel.sigma.Sigma;
-import viniciuslrangel.sigma.Spells.Base.BaseSpell;
+import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.Boolean.Constants.BooleanFalse;
 import viniciuslrangel.sigma.Spells.Boolean.Constants.BooleanTrue;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.*;
+
+import java.lang.instrument.IllegalClassFormatException;
 
 public class SpellRegistry {
 
@@ -22,20 +27,30 @@ public class SpellRegistry {
         init = true;
 
         register(BooleanTrue.class);
+        register(BooleanFalse.class);
+        register(BooleanEquals.class);
+        register(BooleanNotEquals.class);
+        register(BooleanGreaterThan.class);
+        register(BooleanGreaterThanOrEquals.class);
+        register(BooleanLessThan.class);
+        register(BooleanLessThanOrEquals.class);
 
     }
 
-    private static void register(Class<? extends BaseSpell> type) {
+    private static void register(Class<? extends SpellPiece> type) {
         try {
-            String key = (String) type.getField("key").get(null);
-            String texture = (Boolean) type.getField("defaultTexture").get(null) ? "default" : key;
-            String group = (String) type.getField("group").get(null);
-            boolean main = (Boolean) type.getField("group_main").get(null);
+            if(!type.isAnnotationPresent(SpellSettings.class))
+                throw new IllegalClassFormatException("Class need SpellSettings annotation");
+            SpellSettings spellSettings = type.getAnnotation(SpellSettings.class);
+            String key = spellSettings.value();
+            String texture = spellSettings.defaultTexture() ? "default" : key;
+            String group = spellSettings.group();
+            boolean main = spellSettings.group_main();
             PsiAPI.spellPieceRegistry.putObject(key, type);
             PsiAPI.simpleSpellTextures.put(key, new ResourceLocation(Sigma.MODID, String.format("textures/spell/" + texture + ".png")));
             PsiAPI.addPieceToGroup(type, group, main);
 
-        } catch (IllegalAccessException | NoSuchFieldException e) {
+        } catch (IllegalClassFormatException e) {
             e.printStackTrace();
         }
     }
