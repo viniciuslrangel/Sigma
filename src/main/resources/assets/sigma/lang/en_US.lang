@@ -24,10 +24,14 @@ psi.spellpiece.booleanOperatorOr=Boolean: Or
 psi.spellpiece.booleanOperatorOr.desc=A || B (|| C)
 psi.spellpiece.booleanOperatorAnd=Boolean: And
 psi.spellpiece.booleanOperatorAnd.desc=A && B (&& C)
+psi.spellpiece.booleanOperatorNot=Boolean: Not
+psi.spellpiece.booleanOperatorNot.desc=Invert booean
 psi.spellpiece.booleanOperatorPlayerShifting=Boolean: Caster sneaking
 psi.spellpiece.booleanOperatorPlayerShifting.desc=If the caster is sneaking
 psi.spellpiece.castOperatorToNumber=Cast: To number
 psi.spellpiece.castOperatorToNumber.desc=Cast object to number
+psi.spellpiece.castOperatorToBoolean=Cast: To boolean
+psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true/other number or null object = false
 
 #ParamName
 viniciuslrangel.sigma.boolean1=Boolean A

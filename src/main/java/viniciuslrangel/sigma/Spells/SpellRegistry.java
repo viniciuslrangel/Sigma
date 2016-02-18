@@ -16,10 +16,17 @@ import viniciuslrangel.sigma.Spells.Boolean.Constants.BooleanTrue;
 import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanAnd;
 import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanOr;
 import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanTernary;
-import viniciuslrangel.sigma.Spells.Boolean.Operators.Relationals.*;
+import viniciuslrangel.sigma.Spells.Boolean.Operators.Relational.*;
 import viniciuslrangel.sigma.Spells.Cast.CastToNumber;
 
+import java.io.File;
 import java.lang.instrument.IllegalClassFormatException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpellRegistry {
 
@@ -30,19 +37,40 @@ public class SpellRegistry {
             return;
         init = true;
 
-        register(BooleanTrue.class);
-        register(BooleanFalse.class);
-        register(BooleanEquals.class);
-        register(BooleanNotEquals.class);
-        register(BooleanGreaterThan.class);
-        register(BooleanGreaterThanOrEquals.class);
-        register(BooleanLessThan.class);
-        register(BooleanLessThanOrEquals.class);
-        register(BooleanTernary.class);
-        register(BooleanOr.class);
-        register(BooleanAnd.class);
-        register(CastToNumber.class);
+        addPackageFromBase("Boolean.Constants");
+        addPackageFromBase("Boolean.Operators.Logical");
+        addPackageFromBase("Boolean.Operators.Relational");
+        addPackageFromBase("Cast");
 
+    }
+
+    private static void addPackageFromBase(String packagePath){
+        addPackage("viniciuslrangel.sigma.Spells."+packagePath);
+    }
+
+    public static void addPackage(String packString){
+
+        URL pack = Sigma.class.getResource(("/"+packString.replaceAll("\\.", "/")).replaceAll("//", "/"));
+
+        File dir = null;
+        try {
+            dir = new File(pack.toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        File[] files = dir.listFiles();
+        List<Class<? extends SpellPiece>> cls = new ArrayList<>();
+        for(File clFile:files)
+            if(!clFile.getName().matches(".*\\$\\d+\\.class") && clFile.getName().endsWith(".class"))
+                try {
+                    Class cl = Class.forName(packString+"."+clFile.getName().substring(0, clFile.getName().lastIndexOf(".class")));
+                    if(cl.isAnnotationPresent(SpellSettings.class))
+                        cls.add(cl);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+        for(Class<? extends SpellPiece> cl:cls)
+            register(cl);
     }
 
     private static void register(Class<? extends SpellPiece> type) {

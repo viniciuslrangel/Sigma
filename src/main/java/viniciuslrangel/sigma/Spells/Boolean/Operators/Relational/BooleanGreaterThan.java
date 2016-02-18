@@ -2,18 +2,15 @@
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
-package viniciuslrangel.sigma.Spells.Boolean.Operators.Relationals;
+package viniciuslrangel.sigma.Spells.Boolean.Operators.Relational;
 
 import vazkii.psi.api.spell.Spell;
 import vazkii.psi.api.spell.SpellContext;
 import vazkii.psi.api.spell.SpellParam;
 import vazkii.psi.api.spell.SpellRuntimeException;
-import vazkii.psi.api.spell.param.ParamAny;
 import vazkii.psi.api.spell.param.ParamNumber;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
-
-import static viniciuslrangel.sigma.Spells.NameList.*;
 
 @SpellSettings(value = "booleanOperatorGreaterThan", defaultTexture = false)
 public class BooleanGreaterThan extends OperatorBase {

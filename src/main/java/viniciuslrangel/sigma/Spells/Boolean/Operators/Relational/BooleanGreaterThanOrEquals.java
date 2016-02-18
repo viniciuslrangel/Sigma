@@ -2,7 +2,7 @@
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
-package viniciuslrangel.sigma.Spells.Boolean.Operators.Relationals;
+package viniciuslrangel.sigma.Spells.Boolean.Operators.Relational;
 
 import vazkii.psi.api.spell.Spell;
 import vazkii.psi.api.spell.SpellContext;
@@ -12,13 +12,13 @@ import vazkii.psi.api.spell.param.ParamNumber;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 
-@SpellSettings(value = "booleanOperatorLessThan", defaultTexture = false)
-public class BooleanLessThan extends OperatorBase {
+@SpellSettings(value = "booleanOperatorGreaterThanOrEquals", defaultTexture = false)
+public class BooleanGreaterThanOrEquals extends OperatorBase {
 
     SpellParam param1;
     SpellParam param2;
 
-    public BooleanLessThan(Spell spell) {
+    public BooleanGreaterThanOrEquals(Spell spell) {
         super(spell);
         addParam(param1 = new ParamNumber(SpellParam.GENERIC_NAME_NUMBER1, SpellParam.RED, false, false));
         addParam(param2 = new ParamNumber(SpellParam.GENERIC_NAME_NUMBER2, SpellParam.GREEN, false, false));
@@ -26,7 +26,7 @@ public class BooleanLessThan extends OperatorBase {
 
     @Override
     public Object execute(SpellContext context) throws SpellRuntimeException {
-        return this.<Double>getParamValue(context, param1) < this.<Double>getParamValue(context, param2);
+        return this.<Double>getParamValue(context, param1) >= this.<Double>getParamValue(context, param2);
     }
 
     @Override
