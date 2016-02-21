@@ -6,6 +6,7 @@ package viniciuslrangel.sigma.Spells;
 
 public class NameList {
 
+    //Spell param names
     public static final String GENERIC_NAME_BOOLEAN1 = "viniciuslrangel.sigma.boolean1";
     public static final String GENERIC_NAME_BOOLEAN2 = "viniciuslrangel.sigma.boolean2";
     public static final String GENERIC_NAME_BOOLEAN3 = "viniciuslrangel.sigma.boolean3";
@@ -13,6 +14,8 @@ public class NameList {
     public static final String GENERIC_NAME_OBJECT1 = "viniciuslrangel.sigma.object1";
     public static final String GENERIC_NAME_OBJECT2 = "viniciuslrangel.sigma.object2";
     public static final String GENERIC_NAME_OBJECT3 = "viniciuslrangel.sigma.object3";
+
+    public static final String SPELL_PIECE1 = "viniciuslrangel.sigma.piece1";
 
     //Exceptions
     public static final String EXCEPTION_NUMBERFORMAT = "viniciuslrangel.sigma.numberformatexception";

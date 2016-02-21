@@ -25,7 +25,7 @@ public class CastToBoolean extends OperatorBase {
 
     @Override
     public Class<?> getEvaluationType() {
-        return Double.class;
+        return Boolean.class;
     }
 
     @Override

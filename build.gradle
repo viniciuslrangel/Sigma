@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-version = "0.2"
+version = "0.2.2"
 group= "viniciuslrangel.sigma" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Sigma"
 

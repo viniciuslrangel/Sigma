@@ -33,6 +33,9 @@ psi.spellpiece.castOperatorToNumber.desc=Cast object to number
 psi.spellpiece.castOperatorToBoolean=Cast: To boolean
 psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true/other number or null object = false
 
+psi.spellpiece.FlowControlWhile=Flow: While loop
+psi.spellpiece.FlowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop loop)
+
 #ParamName
 viniciuslrangel.sigma.boolean1=Boolean A
 viniciuslrangel.sigma.boolean2=Boolean B
@@ -41,6 +44,10 @@ viniciuslrangel.sigma.boolean3=Boolean C
 viniciuslrangel.sigma.object1=Object A
 viniciuslrangel.sigma.object2=Object B
 viniciuslrangel.sigma.object3=Object C
+
+viniciuslrangel.sigma.piece1=Trick A
+viniciuslrangel.sigma.piece2=Trick B
+viniciuslrangel.sigma.piece3=Trick C
 
 #Exception
 viniciuslrangel.sigma.numberformatexception=Number Format Error

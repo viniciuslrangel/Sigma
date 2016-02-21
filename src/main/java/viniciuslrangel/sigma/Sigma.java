@@ -9,7 +9,12 @@ package viniciuslrangel.sigma;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import vazkii.psi.common.spell.SpellCompiler;
 import viniciuslrangel.sigma.Spells.SpellRegistry;
+
+import java.lang.reflect.Method;
 
 @Mod(modid = Sigma.MODID, version = Sigma.VERSION, dependencies = "required-after:Psi")
 public class Sigma {
