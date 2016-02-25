@@ -4,17 +4,59 @@
  */
 package viniciuslrangel.sigma.Spells.FlowControl;
 
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.EnumChatFormatting;
 import vazkii.psi.api.spell.Spell;
+import vazkii.psi.api.spell.SpellContext;
+import vazkii.psi.api.spell.SpellParam;
+import vazkii.psi.api.spell.SpellRuntimeException;
+import vazkii.psi.api.spell.param.ParamNumber;
 import viniciuslrangel.sigma.Spells.Base.FlowBase;
+import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 
+@SpellSettings(value = "FlowControlFor", defaultTexture = false)
 public class FlowFor extends FlowBase {
+
+    ParamNumber p_max;
+    ParamNumber p_step;
 
     public FlowFor(Spell spell) {
         super(spell);
-        BoolParam.addParam(this);
-        BoolParam.addParam(this);
+        addParam(p_max = new ParamNumber(SpellParam.GENERIC_NAME_NUMBER1, SpellParam.RED, false, false));
+        addParam(p_step = new ParamNumber(SpellParam.GENERIC_NAME_NUMBER2, SpellParam.GREEN, true, false));
         BoolParam.addParam(this, true);
     }
 
+    @Override
+    public Object execute(SpellContext context) throws SpellRuntimeException {
+        super.execute(context);
+        Double max = getParamValue(context, p_max);
+        Double step = getParamValue(context, p_step);
+        if (step == null)
+            if (max > 0)
+                step = 1d;
+            else
+                step = -1d;
+        int count = 0;
+        Boolean useTry = BoolParam.getValue(context, this, 3);
+        for (int i = 0; i < max; i += step) {
+
+            if (count++ > 500)
+                throw new SpellRuntimeException("Loop limit!");
+            if (useTry != null && !useTry) {
+                try {
+                    executeSpell(context, action, trick);
+                } catch (SpellRuntimeException e) {
+                    if (!context.caster.worldObj.isRemote && !context.shouldSuppressErrors())
+                        context.caster.addChatComponentMessage(new ChatComponentTranslation(e.getMessage())
+                                .setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+                }
+            } else
+                executeSpell(context, action, trick);
+        }
+
+        return null;
+    }
 }

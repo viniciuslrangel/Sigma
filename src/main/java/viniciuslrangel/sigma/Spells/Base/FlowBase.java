@@ -7,11 +7,7 @@ package viniciuslrangel.sigma.Spells.Base;
 import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.internal.IPlayerData;
 import vazkii.psi.api.spell.*;
-import vazkii.psi.api.spell.piece.PieceTrick;
-import viniciuslrangel.sigma.Spells.FlowControl.FlowWhile;
 import viniciuslrangel.sigma.Spells.NameList;
-
-import java.util.Map;
 
 public abstract class FlowBase extends OperatorBase {
 
@@ -19,17 +15,7 @@ public abstract class FlowBase extends OperatorBase {
 
     public FlowBase(Spell spell) {
         super(spell);
-        addParam(output = new SpellParam(NameList.SPELL_PIECE1, SpellParam.GRAY, false) {
-            @Override
-            protected Class<?> getRequiredType() {
-                return Null.class;
-            }
-
-            @Override
-            public boolean canAccept(SpellPiece piece) {
-                return piece.getPieceType() == EnumPieceType.TRICK && (paramSides.get(this) == Side.RIGHT || paramSides.get(this) == Side.BOTTOM);
-            }
-        });
+        addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.GRAY, false));
     }
 
     @Override
@@ -70,7 +56,29 @@ public abstract class FlowBase extends OperatorBase {
                 updateSpell(context, spell.grid.getPieceAtSideSafely(piece.x, piece.y, side));
             }
         }
-        context.cspell.evaluatedObjects[piece.x][piece.y] = piece.execute(context);
+        context.evaluatedObjects[piece.x][piece.y] = piece.execute(context);
     }
+
+    public class TrickParam extends SpellParam{
+
+        public TrickParam(String name, int color, boolean canDisable) {
+            super(name, color, canDisable);
+        }
+
+        @Override
+        protected Class<?> getRequiredType() {
+            return Null.class;
+        }
+
+        @Override
+        public boolean canAccept(SpellPiece piece) {
+            SpellPiece connected = piece.spell.grid.getPieceAtSideSafely(x, y, paramSides.get(this));
+            if(connected == null)
+                return false;
+            return connected.getPieceType() == EnumPieceType.TRICK && (paramSides.get(this) == Side.RIGHT || paramSides.get(this) == Side.BOTTOM);
+        }
+
+    }
+
 
 }

@@ -7,12 +7,14 @@ package viniciuslrangel.sigma.Spells.FlowControl;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
-import vazkii.psi.api.spell.*;
+import vazkii.psi.api.spell.Spell;
+import vazkii.psi.api.spell.SpellContext;
+import vazkii.psi.api.spell.SpellRuntimeException;
 import viniciuslrangel.sigma.Spells.Base.FlowBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 
-@SpellSettings("FlowControlWhile")
+@SpellSettings(value = "FlowControlWhile", defaultTexture = false)
 public class FlowWhile extends FlowBase {
 
     public FlowWhile(Spell spell) {
@@ -28,7 +30,7 @@ public class FlowWhile extends FlowBase {
         Boolean useTry = BoolParam.getValue(context, this, 1);
         while (true) {
 
-            if (count++ > 300)
+            if (count++ > 500)
                 throw new SpellRuntimeException("Loop limit!");
             if (!BoolParam.getValue(context, this, 0))
                 break;

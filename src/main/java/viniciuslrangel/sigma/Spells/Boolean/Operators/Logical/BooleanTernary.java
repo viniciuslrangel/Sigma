@@ -4,14 +4,15 @@
  */
 package viniciuslrangel.sigma.Spells.Boolean.Operators.Logical;
 
-import vazkii.psi.api.spell.*;
+import vazkii.psi.api.spell.Spell;
+import vazkii.psi.api.spell.SpellContext;
+import vazkii.psi.api.spell.SpellParam;
+import vazkii.psi.api.spell.SpellRuntimeException;
 import vazkii.psi.api.spell.param.ParamAny;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 import viniciuslrangel.sigma.Spells.NameList;
-
-import java.net.ContentHandler;
 
 @SpellSettings(value = "booleanOperatorTernary", defaultTexture = false)
 public class BooleanTernary extends OperatorBase {

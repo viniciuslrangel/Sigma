@@ -1,3 +1,5 @@
+psimisc.providerMod.Sigma=Sigma
+
 #Datatype
 psi.datatype.Boolean=Boolean
 
@@ -35,6 +37,8 @@ psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true/other number or
 
 psi.spellpiece.FlowControlWhile=Flow: While loop
 psi.spellpiece.FlowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop loop)
+psi.spellpiece.FlowControlFor=Flow: For loop
+psi.spellpiece.FlowControlFor.desc=Loop From 0(or Number B) to Number A. (If B be true, error won't stop loop)
 
 #ParamName
 viniciuslrangel.sigma.boolean1=Boolean A

@@ -9,9 +9,9 @@ import vazkii.psi.api.spell.SpellParam;
 import vazkii.psi.api.spell.SpellPiece;
 import vazkii.psi.api.spell.param.ParamSpecific;
 
-import static viniciuslrangel.sigma.Spells.NameList.*;
-
 import java.util.Map;
+
+import static viniciuslrangel.sigma.Spells.NameList.*;
 
 public class BoolParam extends ParamSpecific {
 
@@ -55,6 +55,8 @@ public class BoolParam extends ParamSpecific {
             case 2:
                 param = spell.params.get(GENERIC_NAME_BOOLEAN3);
                 break;
+            default:
+                return null;
         }
         if (!spell.paramSides.get(param).isEnabled())
             return null;
