@@ -7,14 +7,13 @@ package viniciuslrangel.sigma.Spells.FlowControl;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
-import vazkii.psi.api.spell.Spell;
-import vazkii.psi.api.spell.SpellContext;
-import vazkii.psi.api.spell.SpellParam;
-import vazkii.psi.api.spell.SpellRuntimeException;
+import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamNumber;
+import vazkii.psi.common.core.handler.PlayerDataHandler;
 import viniciuslrangel.sigma.Spells.Base.FlowBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
+import viniciuslrangel.sigma.Spells.NameList;
 
 @SpellSettings(value = "FlowControlFor", defaultTexture = false)
 public class FlowFor extends FlowBase {
@@ -41,10 +40,20 @@ public class FlowFor extends FlowBase {
                 step = -1d;
         int count = 0;
         Boolean useTry = BoolParam.getValue(context, this, 3);
+        SpellMetadata meta = new SpellMetadata();
+        try {
+            trick.addToMetadata(meta);
+        } catch (SpellCompilationException e) {
+            meta.addStat(EnumSpellStat.COST, 20);
+        }
         for (int i = 0; i < max; i += step) {
-
             if (count++ > 500)
-                throw new SpellRuntimeException("Loop limit!");
+                throw new SpellRuntimeException(NameList.EXCEPTION_INFINITYLOOP);
+            if (context.customData.containsKey("loopForIndex"))
+                context.customData.replace("loopForIndex", i);
+            else
+                context.customData.put("loopForIndex", i);
+            PlayerDataHandler.get(context.caster).deductPsi(meta.stats.get(EnumSpellStat.COST), 3, true);
             if (useTry != null && !useTry) {
                 try {
                     executeSpell(context, action, trick);

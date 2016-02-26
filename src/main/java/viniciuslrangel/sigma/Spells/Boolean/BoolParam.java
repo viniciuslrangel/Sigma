@@ -58,6 +58,8 @@ public class BoolParam extends ParamSpecific {
             default:
                 return null;
         }
+        if(param == null)
+            return null;
         if (!spell.paramSides.get(param).isEnabled())
             return null;
         return spell.getParamValue(context, param);

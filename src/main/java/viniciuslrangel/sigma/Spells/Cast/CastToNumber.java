@@ -31,7 +31,10 @@ public class CastToNumber extends OperatorBase {
     @Override
     public Object execute(SpellContext context) throws SpellRuntimeException {
         try {
-            return Double.valueOf(getParamValue(context, param).toString());
+            Object obj = getParamValue(context, param);
+            if(obj == null)
+                return 0d;
+            return Double.valueOf(obj.toString());
         }catch(NumberFormatException nfe){
             throw new SpellRuntimeException(NameList.EXCEPTION_NUMBERFORMAT);
         }

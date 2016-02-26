@@ -21,7 +21,13 @@ import viniciuslrangel.sigma.Spells.Boolean.Operators.Relational.*;
 import viniciuslrangel.sigma.Spells.Cast.CastToBoolean;
 import viniciuslrangel.sigma.Spells.Cast.CastToNumber;
 import viniciuslrangel.sigma.Spells.FlowControl.FlowFor;
+import viniciuslrangel.sigma.Spells.FlowControl.FlowIf;
 import viniciuslrangel.sigma.Spells.FlowControl.FlowWhile;
+import viniciuslrangel.sigma.Spells.FlowControl.FlowSequence;
+import viniciuslrangel.sigma.Spells.Var.Constant.NullConstant;
+import viniciuslrangel.sigma.Spells.Var.Operators.VariableForIndex;
+import viniciuslrangel.sigma.Spells.Var.Operators.VariableGet;
+import viniciuslrangel.sigma.Spells.Var.Tricks.VariableSet;
 
 import java.lang.instrument.IllegalClassFormatException;
 
@@ -34,11 +40,6 @@ public class SpellRegistry {
             return;
         init = true;
 
-        /**addPackageFromBase("Boolean.Constants");
-         addPackageFromBase("Boolean.Operators.Logical");
-         addPackageFromBase("Boolean.Operators.Relational");
-         addPackageFromBase("Cast");
-         */
         register(
                 BooleanTrue.class,
                 BooleanFalse.class,
@@ -55,7 +56,13 @@ public class SpellRegistry {
                 CastToNumber.class,
                 CastToBoolean.class,
                 FlowWhile.class,
-                FlowFor.class
+                FlowFor.class,
+                VariableForIndex.class,
+                VariableGet.class,
+                VariableSet.class,
+                NullConstant.class,
+                FlowIf.class,
+                FlowSequence.class
         );
 
     }

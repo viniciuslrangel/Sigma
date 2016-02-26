@@ -27,9 +27,10 @@ psi.spellpiece.booleanOperatorOr.desc=A || B (|| C)
 psi.spellpiece.booleanOperatorAnd=Boolean: And
 psi.spellpiece.booleanOperatorAnd.desc=A && B (&& C)
 psi.spellpiece.booleanOperatorNot=Boolean: Not
-psi.spellpiece.booleanOperatorNot.desc=Invert booean
+psi.spellpiece.booleanOperatorNot.desc=Invert boolean
 psi.spellpiece.booleanOperatorPlayerShifting=Boolean: Caster sneaking
 psi.spellpiece.booleanOperatorPlayerShifting.desc=If the caster is sneaking
+
 psi.spellpiece.castOperatorToNumber=Cast: To number
 psi.spellpiece.castOperatorToNumber.desc=Cast object to number
 psi.spellpiece.castOperatorToBoolean=Cast: To boolean
@@ -39,6 +40,19 @@ psi.spellpiece.FlowControlWhile=Flow: While loop
 psi.spellpiece.FlowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop loop)
 psi.spellpiece.FlowControlFor=Flow: For loop
 psi.spellpiece.FlowControlFor.desc=Loop From 0(or Number B) to Number A. (If B be true, error won't stop loop)
+psi.spellpiece.FlowIf=Flow: IF
+psi.spellpiece.FlowIf.desc=If Boolean C be true, execute Trick A else execute Trick B
+psi.spellpiece.FlowSequence=Flow: Sequence
+psi.spellpiece.FlowSequence.desc=Execute the Trick A and Trick B, in sequence
+
+psi.spellpiece.VariableForLoopIndex=Variable: For Loop Index
+psi.spellpiece.VariableForLoopIndex.desc=Get index of nearest "For loop"
+psi.spellpiece.VariableGet=Variable: Get value
+psi.spellpiece.VariableGet.desc=Get value from index
+psi.spellpiece.VariableSet=Variable: Set value
+psi.spellpiece.VariableSet.desc=Set value to index
+psi.spellpiece.ConstantNull=Constant: Null
+psi.spellpiece.ConstantNull.desc=Null value
 
 #ParamName
 viniciuslrangel.sigma.boolean1=Boolean A
@@ -55,3 +69,4 @@ viniciuslrangel.sigma.piece3=Trick C
 
 #Exception
 viniciuslrangel.sigma.numberformatexception=Number Format Error
+viniciuslrangel.sigma.infinityloopexception=Loop limit

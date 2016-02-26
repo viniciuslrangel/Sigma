@@ -18,6 +18,10 @@ public abstract class FlowBase extends OperatorBase {
         addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.GRAY, false));
     }
 
+    public FlowBase(Spell spell, boolean other){
+        super(spell);
+    }
+
     @Override
     public EnumPieceType getPieceType() {
         return EnumPieceType.TRICK;
@@ -56,7 +60,8 @@ public abstract class FlowBase extends OperatorBase {
                 updateSpell(context, spell.grid.getPieceAtSideSafely(piece.x, piece.y, side));
             }
         }
-        context.evaluatedObjects[piece.x][piece.y] = piece.execute(context);
+        if(piece.getPieceType() != EnumPieceType.TRICK)
+            context.evaluatedObjects[piece.x][piece.y] = piece.execute(context);
     }
 
     public class TrickParam extends SpellParam{

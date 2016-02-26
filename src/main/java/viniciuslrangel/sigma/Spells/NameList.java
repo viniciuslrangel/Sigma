@@ -16,8 +16,10 @@ public class NameList {
     public static final String GENERIC_NAME_OBJECT3 = "viniciuslrangel.sigma.object3";
 
     public static final String SPELL_PIECE1 = "viniciuslrangel.sigma.piece1";
+    public static final String SPELL_PIECE2 = "viniciuslrangel.sigma.piece2";
 
     //Exceptions
     public static final String EXCEPTION_NUMBERFORMAT = "viniciuslrangel.sigma.numberformatexception";
+    public static final String EXCEPTION_INFINITYLOOP = "viniciuslrangel.sigma.infinityloopexception";
 
 }
