@@ -9,8 +9,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import vazkii.psi.api.spell.Spell;
 import viniciuslrangel.sigma.Spells.Base.ConstantBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings("ConstantNull")
+@SpellSettings(value = "ConstantNull", group = NameList.GROUP_VARIABLES)
 public class NullConstant extends ConstantBase {
 
     public NullConstant(Spell spell) {

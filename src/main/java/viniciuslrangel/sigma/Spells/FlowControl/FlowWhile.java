@@ -12,8 +12,9 @@ import vazkii.psi.common.core.handler.PlayerDataHandler;
 import viniciuslrangel.sigma.Spells.Base.FlowBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "FlowControlWhile", defaultTexture = false)
+@SpellSettings(value = "FlowControlWhile", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowWhile extends FlowBase {
 
     public FlowWhile(Spell spell) {

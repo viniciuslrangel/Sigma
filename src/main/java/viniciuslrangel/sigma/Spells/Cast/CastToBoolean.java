@@ -13,7 +13,7 @@ import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "castOperatorToBoolean", defaultTexture = false)
+@SpellSettings(value = "castOperatorToBoolean", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class CastToBoolean extends OperatorBase {
 
     SpellParam param;

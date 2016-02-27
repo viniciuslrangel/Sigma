@@ -11,8 +11,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import vazkii.psi.api.spell.Spell;
 import viniciuslrangel.sigma.Spells.Base.ConstantBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings("booleanTrue")
+@SpellSettings(value = "booleanTrue", group = NameList.GROUP_BOOLEAN)
 public class BooleanTrue extends ConstantBase{
 
     public BooleanTrue(Spell spell) {

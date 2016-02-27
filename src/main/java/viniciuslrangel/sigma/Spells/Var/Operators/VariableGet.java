@@ -11,8 +11,9 @@ import vazkii.psi.api.spell.SpellRuntimeException;
 import vazkii.psi.api.spell.param.ParamNumber;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "VariableGet", defaultTexture = false)
+@SpellSettings(value = "VariableGet", defaultTexture = false, group = NameList.GROUP_VARIABLES)
 public class VariableGet extends OperatorBase {
 
     SpellParam index;

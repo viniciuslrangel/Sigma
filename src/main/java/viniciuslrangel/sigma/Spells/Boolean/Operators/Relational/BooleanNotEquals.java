@@ -8,8 +8,9 @@ import vazkii.psi.api.spell.Spell;
 import vazkii.psi.api.spell.SpellContext;
 import vazkii.psi.api.spell.SpellRuntimeException;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "booleanOperatorNotEquals", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorNotEquals", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanNotEquals extends BooleanEquals {
 
     public BooleanNotEquals(Spell spell) {

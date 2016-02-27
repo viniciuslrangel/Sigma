@@ -15,7 +15,7 @@ import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "FlowControlFor", defaultTexture = false)
+@SpellSettings(value = "FlowControlFor", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowFor extends FlowBase {
 
     ParamNumber p_max;

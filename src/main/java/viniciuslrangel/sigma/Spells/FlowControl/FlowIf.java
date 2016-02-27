@@ -10,7 +10,7 @@ import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings("FlowIf")
+@SpellSettings(value = "FlowIf", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL, group_main = true)
 public class FlowIf extends FlowBase {
 
     CompiledSpell.Action action2;

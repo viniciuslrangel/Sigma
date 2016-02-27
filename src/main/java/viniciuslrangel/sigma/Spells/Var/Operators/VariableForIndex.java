@@ -9,8 +9,9 @@ import vazkii.psi.api.spell.SpellContext;
 import vazkii.psi.api.spell.SpellRuntimeException;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "VariableForLoopIndex", defaultTexture = false)
+@SpellSettings(value = "VariableForLoopIndex", defaultTexture = false, group = NameList.GROUP_VARIABLES)
 public class VariableForIndex extends OperatorBase {
 
     public VariableForIndex(Spell spell) {

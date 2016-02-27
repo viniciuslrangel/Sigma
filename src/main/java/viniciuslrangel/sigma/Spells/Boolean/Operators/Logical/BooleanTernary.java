@@ -14,7 +14,7 @@ import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "booleanOperatorTernary", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorTernary", defaultTexture = false, group = NameList.GROUP_BOOLEAN, group_main = true)
 public class BooleanTernary extends OperatorBase {
 
     SpellParam obj1;

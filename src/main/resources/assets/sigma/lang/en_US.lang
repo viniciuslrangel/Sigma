@@ -70,3 +70,13 @@ viniciuslrangel.sigma.piece3=Trick C
 #Exception
 viniciuslrangel.sigma.numberformatexception=Number Format Error
 viniciuslrangel.sigma.infinityloopexception=Loop limit
+
+#Groups
+psi.piecegroup.advancedFlowControl=Advanced Flow Control
+psi.piecegroup.advancedFlowControl.desc=Add Controlled Loops and others statements that you can control Trick execution.
+
+psi.piecegroup.booleanSystem=Booleans
+psi.piecegroup.booleanSystem.desc=You can use boolean to compare and process values to do more specific tricks.
+
+psi.piecegroup.variableSystem=Variables
+psi.piecegroup.variableSystem.desc=Storage values for keep then inside loops.

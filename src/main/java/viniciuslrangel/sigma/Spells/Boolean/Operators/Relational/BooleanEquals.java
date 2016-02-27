@@ -11,10 +11,11 @@ import vazkii.psi.api.spell.SpellRuntimeException;
 import vazkii.psi.api.spell.param.ParamAny;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
 import static viniciuslrangel.sigma.Spells.NameList.*;
 
-@SpellSettings(value = "booleanOperatorEquals", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorEquals", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanEquals extends OperatorBase{
 
     SpellParam obj1;

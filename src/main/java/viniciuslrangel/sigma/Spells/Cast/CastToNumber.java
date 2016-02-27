@@ -13,7 +13,7 @@ import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "castOperatorToNumber", defaultTexture = false)
+@SpellSettings(value = "castOperatorToNumber", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class CastToNumber extends OperatorBase {
 
     SpellParam param;

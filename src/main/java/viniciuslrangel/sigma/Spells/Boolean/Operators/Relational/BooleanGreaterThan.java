@@ -11,8 +11,9 @@ import vazkii.psi.api.spell.SpellRuntimeException;
 import vazkii.psi.api.spell.param.ParamNumber;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "booleanOperatorGreaterThan", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorGreaterThan", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanGreaterThan extends OperatorBase {
 
     SpellParam param1;

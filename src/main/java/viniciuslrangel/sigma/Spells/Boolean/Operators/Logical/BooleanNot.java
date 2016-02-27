@@ -10,8 +10,9 @@ import vazkii.psi.api.spell.SpellRuntimeException;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "booleanOperatorNot", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorNot", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanNot extends OperatorBase {
 
     public BooleanNot(Spell spell) {

@@ -10,8 +10,9 @@ import vazkii.psi.api.spell.SpellRuntimeException;
 import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
+import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "booleanOperatorAnd", defaultTexture = false)
+@SpellSettings(value = "booleanOperatorAnd", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanAnd extends OperatorBase {
 
     public BooleanAnd(Spell spell) {
