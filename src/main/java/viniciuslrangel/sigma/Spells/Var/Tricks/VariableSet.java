@@ -15,7 +15,7 @@ import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Base.TrickBase;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "VariableSet", defaultTexture = false)
+@SpellSettings(value = "VariableSet", defaultTexture = false, group = NameList.GROUP_VARIABLES, group_main = true)
 public class VariableSet extends TrickBase {
 
     SpellParam index;
