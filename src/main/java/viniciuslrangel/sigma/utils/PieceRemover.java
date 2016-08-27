@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class PieceRemover {
 
-    public static void load() throws NoSuchFieldException, IllegalAccessException {
+    public static void load() throws RuntimeException, IllegalAccessException {
         Configuration config = Sigma.configFile;
 
         String[] pieces = config.getStringList("pieceToRemove", "Piece Remover", new String[0], "Remove spell pieces from game\nRegistered pieces: " + Arrays.toString(PsiAPI.spellPieceRegistry.getKeys().toArray()));
@@ -26,9 +26,20 @@ public class PieceRemover {
         if (config.hasChanged())
             config.save();
 
-        Field inverseObjectRegistryField = RegistryNamespaced.class.getDeclaredField("inverseObjectRegistry");
+        Field inverseObjectRegistryField = null;
+        for (Field f : RegistryNamespaced.class.getDeclaredFields())
+            if (f.getType() == Map.class)
+                inverseObjectRegistryField = f;
+        if(inverseObjectRegistryField == null)
+            throw new RuntimeException("inverseObjectRegistry not found");
         inverseObjectRegistryField.setAccessible(true);
-        Field registryObjectsField = RegistrySimple.class.getDeclaredField("registryObjects");
+
+        Field registryObjectsField = null;
+        for (Field f : RegistrySimple.class.getDeclaredFields())
+            if (f.getType() == Map.class)
+                registryObjectsField = f;
+        if(registryObjectsField == null)
+            throw new RuntimeException("registryObjects not found");
         registryObjectsField.setAccessible(true);
 
         Map<Class<? extends SpellPiece>, String> inverseObjectRegistry = (Map<Class<? extends SpellPiece>, String>) inverseObjectRegistryField.get(PsiAPI.spellPieceRegistry);
@@ -43,7 +54,7 @@ public class PieceRemover {
                 registryObjects.remove(k);
                 PsiAPI.groupsForPiece.remove(spellPiece);
                 PsiAPI.pieceMods.remove(spellPiece);
-            }else
+            } else
                 FMLLog.warning("Invalid piece in Sigma Remover config");
         }
 

@@ -22,7 +22,7 @@ import viniciuslrangel.sigma.utils.PieceRemover;
 public class Sigma {
 
     public static final String MODID = "Sigma";
-    static final String VERSION = "1.0";
+    static final String VERSION = "1.1";
 
     public static Configuration configFile;
 
@@ -37,12 +37,13 @@ public class Sigma {
     }
 
     @EventHandler
-    public void postInit(FMLPostInitializationEvent event){
+    public void postInit(FMLPostInitializationEvent event) {
         try {
             PieceRemover.load();
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            FMLLog.bigWarning("Error removing spell pieces! Perhaps incompatible PSI version");
-            e.printStackTrace();
+        } catch (Exception e) {
+            FMLLog.warning("Error removing spell pieces! Perhaps incompatible PSI or minecraft version.\n" +
+                    "Function disabled\n" +
+                    e.getMessage());
         }
     }
 
