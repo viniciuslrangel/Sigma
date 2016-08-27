@@ -34,16 +34,18 @@ psi.spellpiece.booleanOperatorPlayerShifting.desc=If the caster is sneaking
 psi.spellpiece.castOperatorToNumber=Cast: To number
 psi.spellpiece.castOperatorToNumber.desc=Cast object to number
 psi.spellpiece.castOperatorToBoolean=Cast: To boolean
-psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true/other number or null object = false
+psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true / other number or null object = false
+psi.spellpiece.castOperatorToVector=Cast: To Vector
+psi.spellpiece.castOperatorToVector.desc=Cast object to vector
 
-psi.spellpiece.FlowControlWhile=Flow: While loop
-psi.spellpiece.FlowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop loop)
-psi.spellpiece.FlowControlFor=Flow: For loop
-psi.spellpiece.FlowControlFor.desc=Loop From 0(or Number B) to Number A. (If B be true, error won't stop loop)
-psi.spellpiece.FlowIf=Flow: IF
-psi.spellpiece.FlowIf.desc=If Boolean C be true, execute Trick A else execute Trick B
-psi.spellpiece.FlowSequence=Flow: Sequence
-psi.spellpiece.FlowSequence.desc=Execute the Trick A and Trick B, in sequence
+psi.spellpiece.flowControlWhile=Flow: While loop
+psi.spellpiece.flowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop the loop)
+psi.spellpiece.flowControlFor=Flow: For loop
+psi.spellpiece.flowControlFor.desc=Loop From 0(or Number B) to Number A. (If C be true, error won't stop the loop)
+psi.spellpiece.flowIf=Flow: IF
+psi.spellpiece.flowIf.desc=If Boolean C be true, execute Trick A else execute Trick B
+psi.spellpiece.flowSequence=Flow: Sequence
+psi.spellpiece.flowSequence.desc=Execute the Trick A and Trick B, in sequence
 
 psi.spellpiece.VariableForLoopIndex=Variable: For Loop Index
 psi.spellpiece.VariableForLoopIndex.desc=Get index of nearest "For loop"
@@ -59,6 +61,7 @@ viniciuslrangel.sigma.boolean1=Boolean A
 viniciuslrangel.sigma.boolean2=Boolean B
 viniciuslrangel.sigma.boolean3=Boolean C
 
+psi.datatype.Object=Object
 viniciuslrangel.sigma.object1=Object A
 viniciuslrangel.sigma.object2=Object B
 viniciuslrangel.sigma.object3=Object C

@@ -1,84 +1,85 @@
 psimisc.providerMod.Sigma=Sigma
 
 #Datatype
-psi.datatype.Boolean=Boolean
+psi.datatype.Boolean=Booleano
 
 #Pieces
-psi.spellpiece.booleanTrue=Boolean: True
-psi.spellpiece.booleanTrue.desc=True constant
-psi.spellpiece.booleanFalse=Boolean: False
-psi.spellpiece.booleanFalse.desc=False constant
-psi.spellpiece.booleanOperatorEquals=Boolean: Equals
+psi.spellpiece.booleanTrue=Booleano: Verdadeiro
+psi.spellpiece.booleanTrue.desc=Constante verdadeiro
+psi.spellpiece.booleanFalse=Booleano: False
+psi.spellpiece.booleanFalse.desc=Constante falso
+psi.spellpiece.booleanOperatorEquals=Booleano: Igual
 psi.spellpiece.booleanOperatorEquals.desc=A == B (== C)
-psi.spellpiece.booleanOperatorNotEquals=Boolean: Not Equals
+psi.spellpiece.booleanOperatorNotEquals=Booleano: Nao igual
 psi.spellpiece.booleanOperatorNotEquals.desc=A != B (or A != C)
-psi.spellpiece.booleanOperatorGreaterThan=Boolean: Greater Than
+psi.spellpiece.booleanOperatorGreaterThan=Booleano: Maior que
 psi.spellpiece.booleanOperatorGreaterThan.desc=A > B
-psi.spellpiece.booleanOperatorGreaterThanOrEquals=Boolean: Greater Than Or Equals
+psi.spellpiece.booleanOperatorGreaterThanOrEquals=Booleano: Maior ou igual
 psi.spellpiece.booleanOperatorGreaterThanOrEquals.desc=A >= B
-psi.spellpiece.booleanOperatorLessThan=Boolean: Less Than
+psi.spellpiece.booleanOperatorLessThan=Booleano: Menor que
 psi.spellpiece.booleanOperatorLessThan.desc=A < B
-psi.spellpiece.booleanOperatorLessThanOrEquals=Boolean: Less Than Or Equals
+psi.spellpiece.booleanOperatorLessThanOrEquals=Booleano: Menor ou igual
 psi.spellpiece.booleanOperatorLessThanOrEquals.desc=A <= B
-psi.spellpiece.booleanOperatorTernary=Boolean: Ternary
+psi.spellpiece.booleanOperatorTernary=Booleano: Ternário
 psi.spellpiece.booleanOperatorTernary.desc=A ? B : C
-psi.spellpiece.booleanOperatorOr=Boolean: Or
+psi.spellpiece.booleanOperatorOr=Booleano: Ou
 psi.spellpiece.booleanOperatorOr.desc=A || B (|| C)
-psi.spellpiece.booleanOperatorAnd=Boolean: And
+psi.spellpiece.booleanOperatorAnd=Booleano: E
 psi.spellpiece.booleanOperatorAnd.desc=A && B (&& C)
-psi.spellpiece.booleanOperatorNot=Boolean: Not
-psi.spellpiece.booleanOperatorNot.desc=Invert boolean
-psi.spellpiece.booleanOperatorPlayerShifting=Boolean: Caster sneaking
-psi.spellpiece.booleanOperatorPlayerShifting.desc=If the caster is sneaking
+psi.spellpiece.booleanOperatorNot=Booleano: Não
+psi.spellpiece.booleanOperatorNot.desc=Inverte booleano
+psi.spellpiece.booleanOperatorPlayerShifting=Booleano: Conjurador esgueirando
+psi.spellpiece.booleanOperatorPlayerShifting.desc=Se o conjurador está esgueirando
 
-psi.spellpiece.castOperatorToNumber=Cast: To number
-psi.spellpiece.castOperatorToNumber.desc=Cast object to number
-psi.spellpiece.castOperatorToBoolean=Cast: To boolean
-psi.spellpiece.castOperatorToBoolean.desc=0 or any object = true/other number or null object = false
-psi.spellpiece.castOperatorToVector=Cast: To Vector
-psi.spellpiece.castOperatorToVector.desc=Simple cast to vector, null if invalid object
+psi.spellpiece.castOperatorToNumber=Conversão: Para número
+psi.spellpiece.castOperatorToNumber.desc=Converte objeto para número
+psi.spellpiece.castOperatorToBoolean=Conversão: Para booleano
+psi.spellpiece.castOperatorToBoolean.desc=0 ou qualquer objeto = true / outro número ou nulo = false
+psi.spellpiece.castOperatorToVector=Conversão: Para vetor
+psi.spellpiece.castOperatorToVector.desc=Converte objeto para vetor
 
-psi.spellpiece.FlowControlWhile=Flow: While loop
-psi.spellpiece.FlowControlWhile.desc=While A be true, execute Trick. (If B be true, error won't stop the loop)
-psi.spellpiece.FlowControlFor=Flow: For loop
-psi.spellpiece.FlowControlFor.desc=Loop From 0(or Number B) to Number A. (If B be true, error won't stop the loop)
-psi.spellpiece.FlowIf=Flow: IF
-psi.spellpiece.FlowIf.desc=If Boolean C be true, execute Trick A else execute Trick B
-psi.spellpiece.FlowSequence=Flow: Sequence
-psi.spellpiece.FlowSequence.desc=Execute the Trick A and Trick B, in sequence
+psi.spellpiece.flowControlWhile=Fluxo: Laço Enquanto
+psi.spellpiece.flowControlWhile.desc=Enquanto A for verdadeiro, executa o Truque. (Se C for verdadeiro, erros não irão parar o loop)
+psi.spellpiece.flowControlFor=Fluxo: Laço Para
+psi.spellpiece.flowControlFor.desc=Laço de 0(ou Número B) até Número A. (Se C for verdadeiro, erros não irão parar o loop)
+psi.spellpiece.flowIf=Fluxo: Se
+psi.spellpiece.flowIf.desc=Se Booleano C for verdadeiro, executa Truque A senão executa Truque B.
+psi.spellpiece.flowSequence=Fluxo: Sequencia
+psi.spellpiece.flowSequence.desc=Executa o Truque A e o Truque B, em sequencia.
 
-psi.spellpiece.VariableForLoopIndex=Variable: For Loop Index
-psi.spellpiece.VariableForLoopIndex.desc=Get index of nearest "For loop"
-psi.spellpiece.VariableGet=Variable: Get value
-psi.spellpiece.VariableGet.desc=Get value from index
-psi.spellpiece.VariableSet=Variable: Set value
-psi.spellpiece.VariableSet.desc=Set value to index
-psi.spellpiece.ConstantNull=Constant: Null
-psi.spellpiece.ConstantNull.desc=Null value
+psi.spellpiece.VariableForLoopIndex=Variável: Índice do Laço Para
+psi.spellpiece.VariableForLoopIndex.desc=Pega o índice do "Laço Para" mais próximo.
+psi.spellpiece.VariableGet=Variável: Pegar valor
+psi.spellpiece.VariableGet.desc=Pega valor do índice
+psi.spellpiece.VariableSet=Variável: Pôr valor
+psi.spellpiece.VariableSet.desc=Põe o valor no índice
+psi.spellpiece.ConstantNull=Constante: Nulo
+psi.spellpiece.ConstantNull.desc=Valor nulo
 
 #ParamName
-viniciuslrangel.sigma.boolean1=Boolean A
-viniciuslrangel.sigma.boolean2=Boolean B
-viniciuslrangel.sigma.boolean3=Boolean C
+viniciuslrangel.sigma.boolean1=Booleano A
+viniciuslrangel.sigma.boolean2=Booleano B
+viniciuslrangel.sigma.boolean3=Booleano C
 
-viniciuslrangel.sigma.object1=Object A
-viniciuslrangel.sigma.object2=Object B
-viniciuslrangel.sigma.object3=Object C
+psi.datatype.Object=Objeto
+viniciuslrangel.sigma.object1=Objeto A
+viniciuslrangel.sigma.object2=Objeto B
+viniciuslrangel.sigma.object3=Objeto C
 
-viniciuslrangel.sigma.piece1=Trick A
-viniciuslrangel.sigma.piece2=Trick B
-viniciuslrangel.sigma.piece3=Trick C
+viniciuslrangel.sigma.piece1=Truque A
+viniciuslrangel.sigma.piece2=Truque B
+viniciuslrangel.sigma.piece3=Truque C
 
 #Exception
-viniciuslrangel.sigma.numberformatexception=Number Format Error
-viniciuslrangel.sigma.infinityloopexception=Loop limit
+viniciuslrangel.sigma.numberformatexception=Erro do formato do número
+viniciuslrangel.sigma.infinityloopexception=Limite do laço
 
 #Groups
-psi.piecegroup.advancedFlowControl=Advanced Flow Control
-psi.piecegroup.advancedFlowControl.desc=Add Controlled Loops and others statements that you can control Trick execution.
+psi.piecegroup.advancedFlowControl=Controle de Fluxo Avançado
+psi.piecegroup.advancedFlowControl.desc=Adiciona laços controlados e outras funções que possibilitam você controlar a execução dos Truques.
 
-psi.piecegroup.booleanSystem=Booleans
-psi.piecegroup.booleanSystem.desc=You can use boolean to compare and process values to do more specific tricks.
+psi.piecegroup.booleanSystem=Booleanos
+psi.piecegroup.booleanSystem.desc=Você pode usar booleanos para comparar e processar valor para fazer truques mais específicos.
 
-psi.piecegroup.variableSystem=Variables
-psi.piecegroup.variableSystem.desc=Storage values for keep then inside loops.
+psi.piecegroup.variableSystem=Variáveis
+psi.piecegroup.variableSystem.desc=Armazena valores para mantê-los dentro de laços.
