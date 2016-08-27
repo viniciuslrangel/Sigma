@@ -46,7 +46,7 @@ public class FlowFor extends FlowBase {
         } catch (SpellCompilationException e) {
             meta.addStat(EnumSpellStat.COST, 20);
         }
-        for (int i = 0; i < max; i += step) {
+        for (int i = 0; step > 0 ? i < max : i > max; i += step) {
             if (count++ > 500)
                 throw new SpellRuntimeException(NameList.EXCEPTION_INFINITYLOOP);
             if (context.customData.containsKey("loopForIndex"))
