@@ -20,6 +20,7 @@ import viniciuslrangel.sigma.Spells.Boolean.Operators.Logical.BooleanTernary;
 import viniciuslrangel.sigma.Spells.Boolean.Operators.Relational.*;
 import viniciuslrangel.sigma.Spells.Cast.CastToBoolean;
 import viniciuslrangel.sigma.Spells.Cast.CastToNumber;
+import viniciuslrangel.sigma.Spells.Cast.CastToVector;
 import viniciuslrangel.sigma.Spells.FlowControl.FlowFor;
 import viniciuslrangel.sigma.Spells.FlowControl.FlowIf;
 import viniciuslrangel.sigma.Spells.FlowControl.FlowWhile;
@@ -55,6 +56,7 @@ public class SpellRegistry {
                 BooleanNotEquals.class,
                 CastToNumber.class,
                 CastToBoolean.class,
+                CastToVector.class,
                 FlowWhile.class,
                 FlowFor.class,
                 VariableForIndex.class,
