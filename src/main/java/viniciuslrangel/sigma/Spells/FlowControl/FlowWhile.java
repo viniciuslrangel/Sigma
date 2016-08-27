@@ -14,7 +14,7 @@ import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Boolean.BoolParam;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "FlowControlWhile", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
+@SpellSettings(value = "flowControlWhile", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowWhile extends FlowBase {
 
     public FlowWhile(Spell spell) {

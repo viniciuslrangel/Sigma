@@ -9,7 +9,7 @@ import viniciuslrangel.sigma.Spells.Base.FlowBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.NameList;
 
-@SpellSettings(value = "FlowSequence", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
+@SpellSettings(value = "flowSequence", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowSequence extends FlowBase {
 
     private CompiledSpell.Action action2;
