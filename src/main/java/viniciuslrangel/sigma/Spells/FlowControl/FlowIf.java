@@ -18,9 +18,8 @@ public class FlowIf extends FlowBase {
     private SpellParam output2;
 
     public FlowIf(Spell spell) {
-        super(spell);
-        addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.CYAN, false));
-        addParam(output2 = new TrickParam(NameList.SPELL_PIECE2, SpellParam.YELLOW, false));
+        super(spell, SpellParam.CYAN);
+        addParam(output2 = new TrickParam(NameList.SPELL_PIECE2, SpellParam.YELLOW, true));
         BoolParam.addParam(this);
     }
 
@@ -37,7 +36,7 @@ public class FlowIf extends FlowBase {
         }
         if (BoolParam.getValue(context, this, 1))
             executeSpell(context, action, trick);
-        else
+        else if(trick2 != null)
             executeSpell(context, action2, trick2);
         return null;
     }

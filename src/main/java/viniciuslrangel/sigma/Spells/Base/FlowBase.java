@@ -14,8 +14,12 @@ public abstract class FlowBase extends OperatorBase {
     protected SpellParam output;
 
     public FlowBase(Spell spell) {
+        this(spell, SpellParam.GRAY);
+    }
+
+    public FlowBase(Spell spell, int color){
         super(spell);
-        addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.GRAY, false));
+        addParam(output = new TrickParam(NameList.SPELL_PIECE1, color, false));
     }
 
     @Override
