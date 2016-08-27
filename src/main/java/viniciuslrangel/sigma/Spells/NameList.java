@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 21:35 (UTC-3)]
  */

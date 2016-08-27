@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [18/02/2016, 16:59 (UTC-3)]
  */
@@ -16,10 +16,6 @@ public abstract class FlowBase extends OperatorBase {
     public FlowBase(Spell spell) {
         super(spell);
         addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.GRAY, false));
-    }
-
-    public FlowBase(Spell spell, boolean other){
-        super(spell);
     }
 
     @Override

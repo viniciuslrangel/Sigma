@@ -1,11 +1,11 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [03/03/2016, 18:49 (UTC-3)]
  */
 package viniciuslrangel.sigma.utils;
 
-import net.minecraft.util.RegistryNamespaced;
-import net.minecraft.util.RegistrySimple;
+import net.minecraft.util.registry.RegistryNamespaced;
+import net.minecraft.util.registry.RegistrySimple;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLLog;
 import vazkii.psi.api.PsiAPI;
@@ -18,12 +18,10 @@ import java.util.Map;
 
 public class PieceRemover {
 
-    private static String[] pieces;
-
     public static void load() throws NoSuchFieldException, IllegalAccessException {
         Configuration config = Sigma.configFile;
 
-        pieces = config.getStringList("pieceToRemove", "Piece Remover", new String[0], "Remove spell pieces from game\nRegistered pieces: " + Arrays.toString(PsiAPI.spellPieceRegistry.getKeys().toArray()));
+        String[] pieces = config.getStringList("pieceToRemove", "Piece Remover", new String[0], "Remove spell pieces from game\nRegistered pieces: " + Arrays.toString(PsiAPI.spellPieceRegistry.getKeys().toArray()));
 
         if (config.hasChanged())
             config.save();

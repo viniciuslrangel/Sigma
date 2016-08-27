@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
@@ -16,8 +16,8 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "booleanOperatorLessThan", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanLessThan extends OperatorBase {
 
-    SpellParam param1;
-    SpellParam param2;
+    private SpellParam param1;
+    private SpellParam param2;
 
     public BooleanLessThan(Spell spell) {
         super(spell);

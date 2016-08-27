@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [17/02/2016, 18:24 (UTC-3)]
  */
@@ -16,7 +16,7 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "castOperatorToNumber", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class CastToNumber extends OperatorBase {
 
-    SpellParam param;
+    private SpellParam param;
 
     public CastToNumber(Spell spell) {
         super(spell);

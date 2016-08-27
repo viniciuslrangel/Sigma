@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [26/02/2016, 12:58 (UTC-3)]
  */
@@ -10,7 +10,6 @@ import vazkii.psi.api.spell.SpellParam;
 import vazkii.psi.api.spell.SpellRuntimeException;
 import vazkii.psi.api.spell.param.ParamAny;
 import vazkii.psi.api.spell.param.ParamNumber;
-import viniciuslrangel.sigma.Spells.Base.OperatorBase;
 import viniciuslrangel.sigma.Spells.Base.SpellSettings;
 import viniciuslrangel.sigma.Spells.Base.TrickBase;
 import viniciuslrangel.sigma.Spells.NameList;
@@ -18,8 +17,8 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "VariableSet", defaultTexture = false, group = NameList.GROUP_VARIABLES, group_main = true)
 public class VariableSet extends TrickBase {
 
-    SpellParam index;
-    SpellParam object;
+    private SpellParam index;
+    private SpellParam object;
 
     public VariableSet(Spell spell) {
         super(spell);

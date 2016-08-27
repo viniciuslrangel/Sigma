@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [17/02/2016, 17:14 (UTC-3)]
  */
@@ -17,8 +17,8 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "booleanOperatorTernary", defaultTexture = false, group = NameList.GROUP_BOOLEAN, group_main = true)
 public class BooleanTernary extends OperatorBase {
 
-    SpellParam obj1;
-    SpellParam obj2;
+    private SpellParam obj1;
+    private SpellParam obj2;
 
     public BooleanTernary(Spell spell) {
         super(spell);

@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
@@ -16,8 +16,8 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "booleanOperatorGreaterThan", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class BooleanGreaterThan extends OperatorBase {
 
-    SpellParam param1;
-    SpellParam param2;
+    private SpellParam param1;
+    private SpellParam param2;
 
     public BooleanGreaterThan(Spell spell) {
         super(spell);

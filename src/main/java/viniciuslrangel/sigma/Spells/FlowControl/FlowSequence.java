@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [26/02/2016, 14:22 (UTC-3)]
  */
@@ -12,12 +12,11 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "FlowSequence", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowSequence extends FlowBase {
 
-    CompiledSpell.Action action2;
-    SpellPiece trick2;
-    SpellParam output2;
+    private CompiledSpell.Action action2;
+    private SpellParam output2;
 
     public FlowSequence(Spell spell) {
-        super(spell, false);
+        super(spell);
         addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.CYAN, false));
         addParam(output2 = new TrickParam(NameList.SPELL_PIECE2, SpellParam.YELLOW, false));
         paramSides.replace(output, SpellParam.Side.RIGHT);
@@ -27,7 +26,7 @@ public class FlowSequence extends FlowBase {
     @Override
     public Object execute(SpellContext context) throws SpellRuntimeException {
         super.execute(context);
-        trick2 = spell.grid.getPieceAtSideSafely(x, y, paramSides.get(output2));
+        SpellPiece trick2 = spell.grid.getPieceAtSideSafely(x, y, paramSides.get(output2));
         if (trick2 != null) {
             CompiledSpell.Action action2 = context.cspell.actionMap.get(trick2);
             if (action2 != null)

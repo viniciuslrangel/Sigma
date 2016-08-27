@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * Source code:
  * https://github.com/viniciuslrangel/Sigma
@@ -67,6 +67,7 @@ public class SpellRegistry {
 
     }
 
+    @SafeVarargs
     private static void register(Class<? extends SpellPiece>... typeArray) {
         for (Class<? extends SpellPiece> type : typeArray)
             try {
@@ -79,7 +80,7 @@ public class SpellRegistry {
                 boolean main = spellSettings.group_main();
                 PsiAPI.spellPieceRegistry.putObject(key, type);
                 PsiAPI.pieceMods.put(type, Sigma.MODID);
-                PsiAPI.simpleSpellTextures.put(key, new ResourceLocation(Sigma.MODID, String.format("textures/spell/" + texture + ".png")));
+                PsiAPI.simpleSpellTextures.put(key, new ResourceLocation(Sigma.MODID, "textures/spell/" + texture + ".png"));
                 PsiAPI.addPieceToGroup(type, group, main);
 
             } catch (IllegalClassFormatException e) {

@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
@@ -44,7 +44,7 @@ public class BoolParam extends ParamSpecific {
     }
 
     public static Boolean getValue(SpellContext context, SpellPiece spell, int index) {
-        SpellParam param = null;
+        SpellParam param;
         switch (index) {
             case 0:
                 param = spell.params.get(GENERIC_NAME_BOOLEAN1);

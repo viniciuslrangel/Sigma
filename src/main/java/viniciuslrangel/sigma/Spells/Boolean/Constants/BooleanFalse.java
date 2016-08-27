@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * Source code:
  * https://github.com/viniciuslrangel/Sigma

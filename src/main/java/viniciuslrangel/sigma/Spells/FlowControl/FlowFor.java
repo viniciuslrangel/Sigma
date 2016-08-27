@@ -1,12 +1,12 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [21/02/2016, 01:35 (UTC-3)]
  */
 package viniciuslrangel.sigma.Spells.FlowControl;
 
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamNumber;
 import vazkii.psi.common.core.handler.PlayerDataHandler;
@@ -18,8 +18,8 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "FlowControlFor", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL)
 public class FlowFor extends FlowBase {
 
-    ParamNumber p_max;
-    ParamNumber p_step;
+    private ParamNumber p_max;
+    private ParamNumber p_step;
 
     public FlowFor(Spell spell) {
         super(spell);
@@ -59,8 +59,8 @@ public class FlowFor extends FlowBase {
                     executeSpell(context, action, trick);
                 } catch (SpellRuntimeException e) {
                     if (!context.caster.worldObj.isRemote && !context.shouldSuppressErrors())
-                        context.caster.addChatComponentMessage(new ChatComponentTranslation(e.getMessage())
-                                .setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+                        context.caster.addChatComponentMessage(new TextComponentTranslation(e.getMessage())
+                                .setStyle(new Style().setColor(TextFormatting.RED)));
                 }
             } else
                 executeSpell(context, action, trick);

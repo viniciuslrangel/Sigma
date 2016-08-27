@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * Source code:
  * https://github.com/viniciuslrangel/Sigma
@@ -10,7 +10,7 @@ import vazkii.psi.api.spell.*;
 
 public class ConstantBase extends SpellPiece {
 
-    public Object constValue;
+    private Object constValue;
 
     public ConstantBase(Spell spell, Object constValue) {
         super(spell);

@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [16/02/2016, 20:17 (UTC-3)]
  */
@@ -22,7 +22,7 @@ public class BooleanEquals extends OperatorBase{
     SpellParam obj2;
     SpellParam obj3;
 
-    public BooleanEquals(Spell spell) {
+    BooleanEquals(Spell spell) {
         super(spell);
         addParam(obj1 = new ParamAny(GENERIC_NAME_OBJECT1, SpellParam.RED, false));
         addParam(obj2 = new ParamAny(GENERIC_NAME_OBJECT2, SpellParam.GREEN, false));

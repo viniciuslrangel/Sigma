@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * Source code:
  * https://github.com/viniciuslrangel/Sigma
@@ -22,7 +22,7 @@ import viniciuslrangel.sigma.utils.PieceRemover;
 public class Sigma {
 
     public static final String MODID = "Sigma";
-    public static final String VERSION = "1.0";
+    static final String VERSION = "1.0";
 
     public static Configuration configFile;
 
@@ -41,7 +41,7 @@ public class Sigma {
         try {
             PieceRemover.load();
         } catch (NoSuchFieldException | IllegalAccessException e) {
-            FMLLog.bigWarning("Error removing spell pieces! Shall incompatible PSI version");
+            FMLLog.bigWarning("Error removing spell pieces! Perhaps incompatible PSI version");
             e.printStackTrace();
         }
     }

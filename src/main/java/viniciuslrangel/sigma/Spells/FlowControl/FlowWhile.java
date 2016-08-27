@@ -1,12 +1,12 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [18/02/2016, 16:54 (UTC-3)]
  */
 package viniciuslrangel.sigma.Spells.FlowControl;
 
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.common.core.handler.PlayerDataHandler;
 import viniciuslrangel.sigma.Spells.Base.FlowBase;
@@ -44,10 +44,10 @@ public class FlowWhile extends FlowBase {
                     executeSpell(context, action, trick);
                 } catch (SpellRuntimeException e) {
                     if (!context.caster.worldObj.isRemote && !context.shouldSuppressErrors())
-                        context.caster.addChatComponentMessage(new ChatComponentTranslation(e.getMessage())
-                                .setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+                        context.caster.addChatComponentMessage(new TextComponentTranslation(e.getMessage())
+                                .setStyle(new Style().setColor(TextFormatting.RED)));
                 }
-            }else
+            } else
                 executeSpell(context, action, trick);
         }
         return null;

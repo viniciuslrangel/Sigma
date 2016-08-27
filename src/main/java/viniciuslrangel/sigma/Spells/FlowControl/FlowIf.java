@@ -13,12 +13,12 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "FlowIf", defaultTexture = false, group = NameList.GROUP_ADVANCED_FLOWCONTROL, group_main = true)
 public class FlowIf extends FlowBase {
 
-    CompiledSpell.Action action2;
-    SpellPiece trick2;
-    SpellParam output2;
+    private CompiledSpell.Action action2;
+    private SpellPiece trick2;
+    private SpellParam output2;
 
     public FlowIf(Spell spell) {
-        super(spell, false);
+        super(spell);
         addParam(output = new TrickParam(NameList.SPELL_PIECE1, SpellParam.CYAN, false));
         addParam(output2 = new TrickParam(NameList.SPELL_PIECE2, SpellParam.YELLOW, false));
         BoolParam.addParam(this);

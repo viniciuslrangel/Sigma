@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [17/02/2016, 18:24 (UTC-3)]
  */
@@ -16,7 +16,7 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "castOperatorToBoolean", defaultTexture = false, group = NameList.GROUP_BOOLEAN)
 public class CastToBoolean extends OperatorBase {
 
-    SpellParam param;
+    private SpellParam param;
 
     public CastToBoolean(Spell spell) {
         super(spell);
@@ -31,13 +31,6 @@ public class CastToBoolean extends OperatorBase {
     @Override
     public Object execute(SpellContext context) throws SpellRuntimeException {
         Object value = getParamValue(context, param);
-        if (Number.class.isAssignableFrom(value.getClass()))
-            if (((Double)value) == 0)
-                return false;
-            else
-                return true;
-        if(value != null)
-            return true;
-        return false;
+        return !Number.class.isAssignableFrom(value.getClass()) || ((Double) value) != 0;
     }
 }

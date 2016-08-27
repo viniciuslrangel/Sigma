@@ -1,4 +1,4 @@
-/**
+/*
  * This class was created by <viniciuslrangel>.
  * File Created @ [26/02/2016, 13:33 (UTC-3)]
  */
@@ -16,7 +16,7 @@ import viniciuslrangel.sigma.Spells.NameList;
 @SpellSettings(value = "VariableGet", defaultTexture = false, group = NameList.GROUP_VARIABLES)
 public class VariableGet extends OperatorBase {
 
-    SpellParam index;
+    private SpellParam index;
 
     public VariableGet(Spell spell) {
         super(spell);
