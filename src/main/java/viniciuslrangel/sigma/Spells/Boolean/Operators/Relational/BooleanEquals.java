@@ -22,7 +22,7 @@ public class BooleanEquals extends OperatorBase{
     SpellParam obj2;
     SpellParam obj3;
 
-    BooleanEquals(Spell spell) {
+    public BooleanEquals(Spell spell) {
         super(spell);
         addParam(obj1 = new ParamAny(GENERIC_NAME_OBJECT1, SpellParam.RED, false));
         addParam(obj2 = new ParamAny(GENERIC_NAME_OBJECT2, SpellParam.GREEN, false));
